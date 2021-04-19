@@ -1,0 +1,45 @@
+@import "variables";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primaryFont;
+  font-size: 16px; /* 1rem = 10px */
+}
+
+.container {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: $primaryFont;
+  font-size: 4rem;
+  font-weight: $light;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  color: $black;
+  font-weight: $light;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

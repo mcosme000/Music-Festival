@@ -1,0 +1,23 @@
+{
+  "name": "music_festival",
+  "version": "1.0.0",
+  "description": "Coding practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcosme000/Music-Festival.git"
+  },
+  "author": "Maria C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcosme000/Music-Festival/issues"
+  },
+  "homepage": "https://github.com/mcosme000/Music-Festival#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
