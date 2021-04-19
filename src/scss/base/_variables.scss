@@ -3,12 +3,21 @@ $primaryFont: "Poppins", sans-serif;
 // COLORS
 $white: #fff;
 $black: #000;
-$yellow: #f2ff49;
-$red: #ff4242;
-$green: #1efc1e;
+$yellow: #ffe718;
+$red: #fa0049;
+$blue: #132fff;
+$lightblue: #0cd2cb;
 
 // FONTS
 $light: 200;
 $regular: 400;
 $bold: 700;
 $black: 900;
+
+//MEDIA QUERIES
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+// SPACING
+$space: 4rem;

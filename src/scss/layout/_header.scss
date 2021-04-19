@@ -1,0 +1,41 @@
+.header {
+  background: $blue;
+
+  .header-content {
+    padding: $space / 2.5 0;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  h1 {
+    color: $white;
+    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include tablet {
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+
+  a {
+    color: $white;
+    font-weight: $light;
+
+    &:hover {
+      //unperson element
+      color: $yellow;
+    }
+  }
+}

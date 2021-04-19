@@ -5,22 +5,29 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  /* 1rem = 10px */
+  font-size: 1.6rem;
 }
 
 .container {
-  max-width: 1000px;
-  width: 80%;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
 h1 {
-  font-family: "Poppins", sans-serif;
   font-size: 4rem;
-  font-weight: 200;
 }
 
 h2 {
@@ -32,8 +39,7 @@ h3 {
 }
 
 p {
-  color: 900;
-  font-weight: 200;
+  font-size: 2rem;
 }
 
 a {
@@ -42,4 +48,50 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.header {
+  background: #132fff;
+}
+
+.header .header-content {
+  padding: 1.6rem 0;
+}
+
+@media (min-width: 768px) {
+  .header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.header-nav a {
+  color: #fff;
+  font-weight: 200;
+}
+
+.header-nav a:hover {
+  color: #ffe718;
 }

@@ -25,7 +25,7 @@ exports.watchFiles = watchFiles;
 /**
 
 require: busca e importa Gulp desde node_modules
-REQUIRE nos va a traer las dependencias que nosotros queramos. 
+REQUIRE nos va a traer las dependencias que nosotros queramos.
  */
 
 //función de src indica dónde vamos a encontrar los archivos de sass

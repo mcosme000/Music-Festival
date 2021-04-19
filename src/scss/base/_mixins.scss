@@ -1,0 +1,20 @@
+@mixin phone {
+  @media (min-width: $phone) {
+    //a partir de 480px se aplica esto:
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    //a partir de 480px se aplica esto:
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    //a partir de 480px se aplica esto:
+    @content;
+  }
+}

@@ -6,21 +6,28 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; //1rem = 10px
+}
 body {
   font-family: $primaryFont;
-  font-size: 16px; /* 1rem = 10px */
+  font-size: 1.6rem; //16px
 }
 
 .container {
-  max-width: 1000px;
-  width: 80%;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
 h1 {
-  font-family: $primaryFont;
   font-size: 4rem;
-  font-weight: $light;
 }
 
 h2 {
@@ -32,8 +39,7 @@ h3 {
 }
 
 p {
-  color: $black;
-  font-weight: $light;
+  font-size: 2rem;
 }
 
 a {

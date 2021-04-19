@@ -1,4 +1,11 @@
-@import "./base/global_styles";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
-
 @import "./base/variables";
+@import "./base/mixins";
+@import "./base/global_styles";
+
+//layouts
+@import "./layout/header";
+
+// The order in which we import the files is VERY IMPORTANT
+// The variables are gonna be used in mixins and global_styles,
+// so they must be imported first.
