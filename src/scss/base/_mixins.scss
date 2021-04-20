@@ -7,14 +7,14 @@
 
 @mixin tablet {
   @media (min-width: $tablet) {
-    //a partir de 480px se aplica esto:
+    //a partir de 768px se aplica esto:
     @content;
   }
 }
 
 @mixin desktop {
   @media (min-width: $desktop) {
-    //a partir de 480px se aplica esto:
+    //a partir de 1200px se aplica esto:
     @content;
   }
 }

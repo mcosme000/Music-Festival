@@ -1,0 +1,48 @@
+.video {
+  position: relative;
+  max-height: 40rem;
+  overflow: hidden;
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    //since it's absolute, it will fit the parent size
+    background: rgb(63, 94, 251);
+    background: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 0.5) 0%,
+      rgba(252, 70, 107, 0.5) 100%
+    );
+    // for the gradient: https://cssgradient.io/
+  }
+
+  video {
+    display: block;
+    width: 100%;
+  }
+}
+
+.video-content {
+  height: 100%;
+  //so it fits the .overlay container height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-weight: $bold;
+    font-size: 6rem;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      font-size: 2rem;
+      background: $red;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+    }
+  }
+}
