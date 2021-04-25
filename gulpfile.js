@@ -1,5 +1,8 @@
-const { series, src, dest, watch } = require("gulp");
+const { series, src, dest, watch, parallel } = require("gulp");
 const sass = require("gulp-sass");
+const imagemin = require("gulp-imagemin");
+const notify = require("gulp-notify");
+const webp = require("gulp-webp");
 
 //función que compila sass
 
@@ -13,6 +16,27 @@ function css() {
     .pipe(dest("./build/css"));
 }
 
+function images() {
+  return (
+    src("src/img/**/*")
+      //lee todas las imágenes de todos los formatos de todos los files
+      .pipe(imagemin())
+      // esta es la función que hemos importado con npm i --save-dev gulp-imagemin
+      .pipe(dest("./build/img"))
+      .pipe(notify({ message: "Img minified" }))
+  );
+}
+
+function versionWebp() {
+  return (
+    src("src/img/**/*")
+      //busca otra vez todas las img de la carpeta
+      .pipe(webp())
+      .pipe(dest("./build/img"))
+      .pipe(notify({ message: "version Webp" }))
+  );
+}
+
 function watchFiles() {
   watch("src/scss/**/*.scss", css);
 }
@@ -21,7 +45,9 @@ function watchFiles() {
 
 exports.css = css;
 exports.watchFiles = watchFiles;
+exports.images = series(images, versionWebp);
 
+exports.default = series(watchFiles);
 /**
 
 require: busca e importa Gulp desde node_modules
