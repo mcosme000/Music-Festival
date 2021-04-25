@@ -1,15 +1,62 @@
 .lineup {
+  padding: $space 0;
+  text-align: center;
   background: $red;
+
+  .lineup-title {
+    font-weight: $regular;
+    margin-bottom: 3rem;
+    color: $white;
+  }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 40% 40%;
-  gap: 2rem;
-  .rock {
-    background: $yellow;
+.concert-container {
+  @include tablet {
+    @include grid(2);
+    gap: $space;
   }
-  .edm {
-    background: $lightblue;
+}
+
+.concert {
+  margin-bottom: $space;
+  padding: 3rem 0;
+  position: relative;
+  border: 5px solid black;
+
+  h3 {
+    color: $black;
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 2rem 0 2rem 9rem;
   }
+  .day {
+    padding: 1rem;
+    width: 8rem;
+    left: -1rem;
+    background: #000;
+    color: #fff;
+    position: absolute;
+  }
+
+  li {
+    text-transform: uppercase;
+    text-align: left;
+    padding: 2rem 0 2rem 9rem;
+  }
+}
+
+.yellow {
+  background: $yellow;
+}
+
+.green {
+  background: $lightblue;
+}
+
+.yellow .dark {
+  background: darken($yellow, 10);
+}
+
+.green .dark {
+  background: darken($lightblue, 20);
 }

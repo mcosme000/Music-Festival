@@ -46,12 +46,16 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   max-width: 100%;
 }
 
 .header {
-  background: #fa0049;
+  background: #ff4242;
 }
 
 .header .header-content {
@@ -134,7 +138,7 @@ img {
 
 .video-content h2 span {
   font-size: 2rem;
-  background: #fa0049;
+  background: #ff4242;
   padding: 0.5rem 2rem;
   border-radius: 5px;
 }
@@ -170,7 +174,7 @@ img {
 
 .information-content .date {
   font-weight: 700;
-  color: #fa0049;
+  color: #ff4242;
 }
 
 .information-img {
@@ -178,19 +182,66 @@ img {
 }
 
 .lineup {
-  background: #fa0049;
+  padding: 4rem 0;
+  text-align: center;
+  background: #ff4242;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 40% 40%;
-  gap: 2rem;
+.lineup .lineup-title {
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #fff;
 }
 
-.grid .rock {
-  background: #ffe718;
+@media (min-width: 768px) {
+  .concert-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
 }
 
-.grid .edm {
-  background: #0cd2cb;
+.concert {
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  position: relative;
+  border: 5px solid black;
+}
+
+.concert h3 {
+  color: 900;
+  font-size: 2.5rem;
+  text-align: left;
+  padding: 2rem 0 2rem 9rem;
+}
+
+.concert .day {
+  padding: 1rem;
+  width: 8rem;
+  left: -1rem;
+  background: #000;
+  color: #fff;
+  position: absolute;
+}
+
+.concert li {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 2rem 0 2rem 9rem;
+}
+
+.yellow {
+  background: #fffd98;
+}
+
+.green {
+  background: #81adc8;
+}
+
+.yellow .dark {
+  background: #fffc65;
+}
+
+.green .dark {
+  background: #457c9e;
 }
