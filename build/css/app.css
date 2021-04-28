@@ -282,3 +282,31 @@ img {
 .gallery-img li {
   justify-self: center;
 }
+
+.overlayImg {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wideImg {
+  width: 60%;
+}
+
+.close {
+  margin-top: 4rem;
+  padding: 1rem 1.2rem;
+  border: 2px solid 900;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.close:hover {
+  cursor: pointer;
+}
