@@ -218,7 +218,7 @@ img {
 .concert .day {
   padding: 1rem;
   width: 8rem;
-  left: -1rem;
+  left: -1.5rem;
   background: #000;
   color: #fff;
   position: absolute;
@@ -244,4 +244,41 @@ img {
 
 .green .dark {
   background: #457c9e;
+}
+
+.gallery {
+  padding: 4rem 0;
+}
+
+.gallery h3 {
+  text-align: center;
+}
+
+.gallery-img {
+  margin-top: 4rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-img {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.3rem;
+  }
+}
+
+.gallery-img li {
+  justify-self: center;
 }

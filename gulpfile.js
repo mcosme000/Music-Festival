@@ -3,8 +3,18 @@ const sass = require("gulp-sass");
 const imagemin = require("gulp-imagemin");
 const notify = require("gulp-notify");
 const webp = require("gulp-webp");
+const concat = require("gulp-concat");
 
 //función que compila sass
+
+const paths = {
+  img: "src/img/**/*",
+  scss: "src/scss/**/*.scss",
+  javascript: "src/js/**/*.js",
+};
+
+// **Va a leer todas las carpetas dentro de scss
+// * va a leer todos los archivos con extensión scss
 
 function css() {
   return src("src/scss/app.scss")
@@ -16,9 +26,18 @@ function css() {
     .pipe(dest("./build/css"));
 }
 
+function javascript() {
+  return (
+    src(paths.javascript)
+      .pipe(concat("bundle.js"))
+      //el nombre del archivo principal se llama bundle.js??
+      .pipe(dest("./build/js"))
+  );
+}
+
 function images() {
   return (
-    src("src/img/**/*")
+    src(paths.img)
       //lee todas las imágenes de todos los formatos de todos los files
       .pipe(imagemin())
       // esta es la función que hemos importado con npm i --save-dev gulp-imagemin
@@ -29,7 +48,7 @@ function images() {
 
 function versionWebp() {
   return (
-    src("src/img/**/*")
+    src(paths.img)
       //busca otra vez todas las img de la carpeta
       .pipe(webp())
       .pipe(dest("./build/img"))
@@ -38,20 +57,20 @@ function versionWebp() {
 }
 
 function watchFiles() {
-  watch("src/scss/**/*.scss", css);
+  watch(paths.scss, css);
+  watch(paths.javascript, javascript);
 }
-// ** va a leer todas las carpetas dentro de scss
-// * va a leer todos los archivos con extensión scss
+// watchFiles:
+// cada vez que hay cambios en las carpetas scss y javascript,
+// va a ejecutar las funciones css y javascript.
 
 exports.css = css;
-exports.watchFiles = watchFiles;
 exports.images = series(images, versionWebp);
+exports.javascript = javascript;
 
 exports.default = series(watchFiles);
-/**
 
+/**
 require: busca e importa Gulp desde node_modules
 REQUIRE nos va a traer las dependencias que nosotros queramos.
  */
-
-//función de src indica dónde vamos a encontrar los archivos de sass

@@ -8,6 +8,8 @@
 @import "./layout/video";
 @import "./layout/information";
 @import "./layout/lineup";
+@import "./layout/gallery";
+
 // The order in which we import the files is VERY IMPORTANT
 // The variables are gonna be used in mixins and global_styles,
 // so they must be imported first.
