@@ -6,9 +6,10 @@ function createGallery() {
   const gallery = document.querySelector(".gallery-img");
 
   for (let i = 1; i <= 12; i++) {
-    const image = document.createElement("li");
+    const image = document.createElement("img");
     image.src = `build/img/thumb/${i}.webp`;
-    console.log(image.src);
-    gallery.appendChild(image);
+    const list = document.createElement("li");
+    list.appendChild(image);
+    gallery.appendChild(list);
   }
 }
