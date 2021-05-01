@@ -1,0 +1,62 @@
+.tickets {
+  padding: $space 0;
+  background: $green;
+  text-align: center;
+
+  h3 {
+    margin-bottom: $space;
+    color: $white;
+  }
+}
+
+.ticket-container {
+  .ticket-class {
+    margin-bottom: 2rem;
+    margin-top: $space;
+    text-align: left;
+    color: $white;
+    font-size: 2.5rem;
+  }
+}
+
+.ticket {
+  width: 100%;
+  background: $white;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td,
+  th {
+    padding: 1.5rem;
+  }
+
+  tbody {
+    th {
+      border-bottom: 1px solid lightgray;
+      border-top: 1px solid lightgray;
+    }
+    td {
+      border-bottom: 1px solid lightgray;
+      border-top: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+    }
+
+    //to delete the border of the bottom of the table!!
+    //I need to select TR an from them use the selector &:last-of-type
+    //this will select THE LAST ROW.
+    tr {
+      &:last-of-type {
+        th,
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .date {
+    font-size: 1.3rem;
+    font-weight: $light;
+  }
+}

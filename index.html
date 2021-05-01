@@ -11,9 +11,9 @@
       <div class="container header-content">
         <h1 class="title">Summer Music Festival</h1>
         <nav class="header-nav">
-          <a href="#">Line up</a>
-          <a href="#">Gallery</a>
-          <a href="#">Tickets</a>
+          <a href="#lineup">Line up</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#tickets">Tickets</a>
         </nav>
       </div>
     </header>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <section class="lineup">
+    <section class="lineup" id="lineup">
       <h3 class="lineup-title">Festival Schedule</h3>
 
       <div class="concert-container container">
@@ -112,11 +112,95 @@
       </div>
     </section>
 
-    <section class="gallery container">
+    <section class="gallery container" id="gallery">
       <h3>Gallery</h3>
       <ul class="gallery-img"></ul>
     </section>
 
+    <section class="tickets" id="tickets">
+      <h3>Tickets</h3>
+      <div class="container">
+        <div class="ticket-container">
+          <p class="ticket-class">Concert tickets</p>
+          <table class="ticket">
+            <thead>
+              <tr>
+                <th></th>
+                <th>1day ticket</th>
+                <th>2day ticket</th>
+                <th>3day ticket</th>
+                <th>4day ticket</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  Pre-sale <br /><span class="date"
+                    >Available from March 15〜17</span
+                  >
+                </th>
+                <td>$200</td>
+                <td>$350</td>
+                <td>$400</td>
+                <td>$550</td>
+              </tr>
+              <tr>
+                <th>
+                  Regular sale <br /><span class="date"
+                    >Available from May 15th〜</span
+                  >
+                </th>
+                <td>$230</td>
+                <td>$380</td>
+                <td>$450</td>
+                <td>$600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ticket-container">
+          <p class="ticket-class">Concert tickets + camping</p>
+          <table class="ticket">
+            <thead>
+              <tr>
+                <th></th>
+                <th>1day ticket</th>
+                <th>2day ticket</th>
+                <th>3day ticket</th>
+                <th>4day ticket</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  Pre-sale <br /><span class="date"
+                    >Available from March 15〜17</span
+                  >
+                </th>
+                <td>$300</td>
+                <td>$450</td>
+                <td>$500</td>
+                <td>$650</td>
+              </tr>
+              <tr>
+                <th>
+                  Regular sale <br /><span class="date"
+                    >Available from May 15th〜</span
+                  >
+                </th>
+                <td>$330</td>
+                <td>$480</td>
+                <td>$550</td>
+                <td>$700</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
     <script src="/build/js/bundle.js"></script>
   </body>
 </html>
