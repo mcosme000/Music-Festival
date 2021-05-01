@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollNav();
 });
 
+//SMOOTH SCROLL
 function scrollNav() {
   const links = document.querySelectorAll(".header-nav a");
   links.forEach((link) => {
@@ -35,6 +36,22 @@ function scrollNav() {
 3. console.log(e.target.attributes.href.value);
     nos indica a dónde va el link
  */
+
+// INTERSECTION OBSERVER (JS API)
+
+const bar = document.querySelector(".header");
+
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      bar.classList.remove("fixed");
+    } else {
+      bar.classList.add("fixed");
+    }
+  });
+});
+//observer toma un elemento a observar:
+observer.observe(document.querySelector(".information"));
 
 document.addEventListener("DOMContentLoaded", () => {
   createGallery();

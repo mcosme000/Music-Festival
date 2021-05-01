@@ -1,5 +1,6 @@
 .header {
   background: $red;
+  width: 100%;
 
   .header-content {
     padding: $space / 2.5 0;
@@ -38,4 +39,10 @@
       color: $blue;
     }
   }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0 0.3rem 0.8rem #444;
 }
